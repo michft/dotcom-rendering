@@ -11,6 +11,7 @@ import { ArticleBody } from '@frontend/web/components/ArticleBody';
 import { BackToTop } from '@frontend/web/components/BackToTop';
 import { SubNav } from '@frontend/web/components/Header/Nav/SubNav/SubNav';
 import { CookieBanner } from '@frontend/web/components/CookieBanner';
+import { MostSupportedAfterArticle } from '@frontend/web/components/MostSupportedAfterArticle';
 
 // TODO: find a better of setting opacity
 const articleWrapper = css`
@@ -59,6 +60,9 @@ export const Article: React.FC<{
                     <ArticleBody CAPI={data.CAPI} config={data.config} />
                     <div className={secondaryColumn} />
                 </article>
+                <MostSupportedAfterArticle
+                    sectionName={data.CAPI.sectionName}
+                />
                 <MostViewed sectionName={data.CAPI.sectionName} />
             </Container>
         </main>
